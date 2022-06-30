@@ -25,9 +25,9 @@
         transition:all 1s linear;
 
 
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .navbar ul{
@@ -43,15 +43,15 @@
 
     .active .navbar{
         transform: translateX(100%);
-        opacity: 1;
-        visibility: visible;
-        pointer-events:auto;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events:none;
     }
     .active .mobile-navbar-btn .mobile-navicon[name="menu-outline"]{
-        display:none ;
+        display:block ;
     }
     .active .mobile-navbar-btn .mobile-navicon[name="close-outline"]{
-        display:block ;
+        display:none ;
     }
 
         .dropmenu{
