@@ -44,7 +44,7 @@
     .active .navbar{
         transform: translateX(100%);
         opacity: 0;
-        visibility: hidden;
+        visibility: visible;
         pointer-events:none;
     }
     .active .mobile-navbar-btn .mobile-navicon[name="menu-outline"]{
