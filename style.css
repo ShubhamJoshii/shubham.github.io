@@ -230,7 +230,7 @@ body{
     height: 100vh;
     display: flex;
     /* background-repeat: no-repeat; */
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
 }
 .aboutfirst{
     
