@@ -40,6 +40,7 @@ body{
     background-size: cover;
 
 }
+
 .navbar ul{
     display: flex;
 }
@@ -173,6 +174,9 @@ body{
 }
 
 
+/* //////////////CONTENT/////////////// */
+/* //////////////CONTENT/////////////// */
+/* //////////////CONTENT/////////////// */
 .content{
     height: 100vh;
     display: flex;
@@ -186,7 +190,7 @@ body{
 .firsthalf{
     color: #EEEEEE;
     padding-top: 100px;
-
+    
     justify-content: center;
     
 }
@@ -215,6 +219,52 @@ body{
 
 }
 
+
+/* ////////////aboutme/////////////// */
+/* ////////////aboutme/////////////// */
+/* ////////////aboutme/////////////// */
+
+#aboutme{
+    background: rgba(0,0,0,0.1) url(aboutbackground2.jpg);
+    top:100vh;
+    height: 100vh;
+    display: flex;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+}
+.aboutfirst{
+    
+    margin: 76px 120px;
+    padding: 65px 33px;
+    background-color: white;
+}
+
+.aboutfirst h1{
+    font-size: 65px;
+    font-family: 'Gentium Book Plus', serif;
+}
+
+.aboutfirst p{
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: 'Gentium Book Plus', serif;
+}
+
+.aboutsecond img{
+    width: 286px;
+    margin: 35px 130px 0px 40px;
+    border: 8px solid white;
+}
+.preborder{
+    width: 327px;
+    margin: 35px 130px 0px 40px;
+    border: 8px solid white;
+    background-color: beige;
+}
+
+.res-phone{
+    display: none;
+}
 footer p{
     text-align: center;
 }
