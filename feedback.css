@@ -127,3 +127,72 @@
     background-color: #ffcc00;
     color: aliceblue;
 }
+
+
+
+
+
+@media only screen and ( max-width:1134px ) {   
+    .container{
+        margin:10px 200px;
+    }
+}
+
+
+@media only screen and ( max-width:871px ) {   
+    .container{
+        margin:10px 100px;
+    }
+}
+
+@media only screen and ( max-width:655px ) {   
+    .container{
+        margin:10px 50px;
+    }
+}
+@media only screen and ( max-width:561px ) {   
+    .container{
+        margin:70px 10px;
+        padding: 50px 10px;
+    }
+}
+
+@media only screen and ( max-width:467px ) {   
+    .firstsection{
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .logo{
+        margin-left: 85px;
+        margin-bottom: 20px;
+    }
+
+        #label1{
+            display: none;
+        }
+
+        #feed1{
+            display: none;
+        }
+
+        .thirdsection label{
+            margin-left: 50px;
+        }
+
+        #feedback{
+            width: 305px;
+        }
+}
+
+@media only screen and ( max-width:393px ) {
+    #label3{
+        display: none;
+    }   
+}
+
+@media only screen and ( max-width:358px ) {
+    #feedback{
+        width: 200px;
+    }
+}
