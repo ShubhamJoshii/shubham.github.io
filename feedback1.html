@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Corinthia&family=Gentium+Book+Plus:wght@700&family=Merriweather:wght@700&family=Work+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="feedback.css" />
+
+  </head>
+  <body class="background">
+    <div class="container">
+      <form action="action.php" method="post" name="google-sheet">
+      <div class="firstsection">
+        <img src="/logo1/SHUBHAM.png" alt="logo" class="logo" />
+        <h1>Your feedback</h1>
+      </div>
+      <div class="secondsection">
+        <p>We would like your feedback to improve our website.</p>
+        <p>What is your opinion of this page?</p>
+        
+        <div class="emotes">
+          <input type="button" name="emotes" value="😒"/>
+          <input type="button" name="emotes" value="🤨"/>
+          <input type="button" name="emotes" value="😐"/>
+          <input type="button" name="emotes" value="😊"/>
+          <input type="button" name="emotes" value="❤️"/>
+        </div>
+      </div>
+      <div class="thirdsection">
+        <p>Please Select your feedback category below.</p>
+        <div class="buttons">
+          <input type="button" value="Suggestion" class="input" name="fcategory" />
+          <input type="button" value="Something is not quite right" class="input" name="fcategory"/>
+          <input type="button" value="Compliment" class="input" name="fcategory"/>
+        </div>
+      </div>
+      <div class="lastsection">
+        <p>Please leave your feedback below:</p>
+        <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Type your feedback"></textarea>
+        <input type="submit" value="Submit ">
+      </div>
+    </form>
+    
+    </div>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbx6MPwpotrnMLvaMuBAfLeJKmgQYR7QTU529l_jKGZRSJYzcwaPcX5sBu3aO0gA1Oun/exec'
+      const form = document.forms['google-sheet']
+  
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>
