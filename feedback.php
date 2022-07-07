@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="FAVICON.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima:wght@700&family=Corinthia&family=Gentium+Book+Plus:wght@700&family=Merriweather:wght@700&family=Work+Sans:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="feedback.css" />
+    <script src="index.js"></script>
+  </head>
+  <body class="background">
+    <div class="container">
+      <form action="action.php" method="post" id="form">
+        <div class="firstsection">
+          <img src="SHUBHAM.png" alt="logo" class="logo" />
+          <h1>Your feedback</h1>
+        </div>
+        <div class="secondsection">
+          <p>We would like your feedback to improve our website.</p>
+          <p>What is your opinion of this page?</p>
+          <!-- emotes -->
+          <div class="emotes">
+            <input type="radio" name="emotes" id="level5" value="Unamused" />
+            <label id="label" for="level5" onclick="color()">😒</label>
+            <input type="radio" name="emotes" id="level4" value="Face with One Eyebrow Raised" />
+            <label for="level4" id="label1" onclick="color1()">🤨</label>
+            <input type="radio" name="emotes" id="level3" value="Neutral Face" />
+            <label for="level3" id="label2" onclick="color2()">😐</label>
+            <input type="radio" name="emotes" id="level2" value="Smiling Face" />
+            <label for="level2" id="label3" onclick="color3()">😊</label>
+            <input type="radio" name="emotes" id="level1" value="Red Heart" />
+            <label for="level1" id="label4" onclick="color4()">❤️</label>
+          </div>
+        </div>
+        <div class="thirdsection">
+          <p>Please Select your feedback category below.</p>
+          <div class="buttons">
+            <input
+              type="radio"
+              id="Suggestion"
+              class="input"
+              value="Suggestion"
+              name="fcategory"
+            />
+            <label for="Suggestion" id="feed" onclick="feed()"
+              >Suggestion</label
+            >
+            <input
+              type="radio"
+              id="error"
+              class="input"
+              value="Something is not quite right"
+              name="fcategory"
+            />
+            <label for="error" id="feed1" onclick="feed1()"
+              >Something is not quite right</label
+            >
+            <input
+              type="radio"
+              id="Compliment"
+              class="input"
+              value="Compliment"
+              name="fcategory"
+            />
+            <label for="Compliment" id="feed2" onclick="feed2()"
+              >Compliment</label
+            >
+          </div>
+        </div>
+        <div class="lastsection">
+          <p>Please leave your feedback below:</p>
+          <textarea
+            name="feedback"
+            id="feedback"
+            cols="30"
+            rows="10"
+            placeholder="Type your feedback"
+          ></textarea>
+          <br />
+          <input name="submit" type="submit" id="submit" value="Submit " />
+        </div>
+      </form>
+    </div>
+
+    <!-- <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxXuHo35dAUQ5cmn-chmby8FyjNyby15IAWbaZWyGBULCFtuLjopo4LVY5f4J3I_KgJ/exec";
+      const form = document.querySelector("#form");
+      const submitButton = document.querySelector("#submit");
+
+      form.addEventListener("submit", (e) => {
+        submitButton.disabled = true;
+        e.preventDefault();
+        let requestBody = new FormData(form);
+        fetch(scriptURL, { method: "POST", body: requestBody })
+          .then((response) => {
+            alert("Your response has been Submit Thank you❤️❤️... ", response);
+            submitButton.disabled = false;
+          })
+          .catch((error) => {
+            alert("Error!", error.message);
+            submitButton.disabled = false;
+          });
+      });
+    </script> -->
+  </body>
+</html>
