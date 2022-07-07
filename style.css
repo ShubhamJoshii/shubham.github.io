@@ -33,8 +33,9 @@ body{
     border-radius: 20PX;
 }
 
-.background{
-    background: rgba(0, 0, 0, 0.7) url('background.jpg');
+.background1{
+    /* background: rgba(0, 0, 0, 0.7) url('background.jpg'); */
+    background: rgba(0, 0, 0, 0.7) url("background1.jpg");
     background-repeat: no-repeat;
     background-blend-mode: darken;
     background-size: cover;
@@ -226,8 +227,9 @@ body{
 
 #aboutme{
     background: rgba(0,0,0,0.1) url(aboutbackground2.jpg);
-    top:100vh;
-    height: 100vh;
+    /* top:100vh;
+    height: 100vh; */
+
     display: flex;
     /* background-repeat: no-repeat; */
     background-attachment: fixed;

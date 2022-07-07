@@ -1,23 +1,46 @@
 <?php
-    $emotes=$_POST['emotes'];
-    $fcategory=$_POST['fcategory'];
-    $feedback=$_POST['feedback'];
-    
+    $servername="localhost:3307";
+    $username="root"; 
+    $password="";
+    $dbname="portfolio";
 
-    
-
-    //database connection
-
-    // Database connection
-    $conn = new mysqli('localhost','root','your_password','test1');
-    if($conn->connect_error){
-        die('Connection Failed:' .$conn->connect_error);
-    }else{
-        $stmt=$conn->prepare("insert into registration(emotes, fcategory, feedback) values(?, ?, ?)");
-        $stmt->bind_param("sss",$emotes, $fcategory, $feedback);
-        $stmt->execute();   
-        echo"registration Successfully...";
-        $stmt->close();
-        $conn->close();
+    if(isset($_POST['submit']))
+    {
+      $emotes=$_POST['emotes'];
+      $fcategory=$_POST['fcategory'];
+      $feedback=$_POST['feedback'];
+  
     }
+
+
+
+
+    // $emotes=$_POST['emotes'];
+    // $fcategory=$_POST['fcategory'];
+    // $feedback=$_POST['feedback'];
+
+    echo"$emotes $fcategory $feedback";
+    $conn=mysqli_connect($servername, $username, $password, $dbname);
+
+    if(!$conn){
+      die("Connection Failed: ".mysqli_connect_error());
+    }
+    else{
+      echo"<br> Connection Successfully";
+    }
+
+    $sql="INSERT INTO feedback(emotes, fcategory, feedback) value( '$emotes', '$fcategory', '$feedback')";
+
+    echo"<br>";
+    if(mysqli_query($conn,$sql)){
+      echo"New Record Created";
+    }else{
+      echo"Error Found ".$sql."<br>".mysqli_error($conn);
+      ;
+    }
+
+    mysqli_close($conn);
+    
+
 ?>
+
